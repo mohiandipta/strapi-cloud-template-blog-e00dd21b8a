@@ -40,7 +40,9 @@
       "type": "string"
     },
     "category": {
-      "type": "string"
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category"
     },
     "content": {
       "type": "json"
