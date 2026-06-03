@@ -36,11 +36,10 @@
       "type": "string"
     },
     "excerpt": {
-      "type": "text"
+      "type": "richtext"
     },
     "link": {
-      "type": "string",
-      "maxLength": 1000
+      "type": "text"
     },
     "category": {
       "type": "relation",
@@ -51,8 +50,7 @@
       "type": "richtext"
     },
     "sourceLink": {
-      "type": "string",
-      "maxLength": 1000
+      "type": "text"
     },
     "tags": {
       "type": "relation",

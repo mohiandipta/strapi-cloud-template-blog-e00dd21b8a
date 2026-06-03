@@ -607,12 +607,9 @@ export interface ApiNewsItemNewsItem extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     date: Schema.Attribute.String;
-    excerpt: Schema.Attribute.Text;
+    excerpt: Schema.Attribute.RichText;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
-    link: Schema.Attribute.String &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 1000;
-      }>;
+    link: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -624,10 +621,7 @@ export interface ApiNewsItemNewsItem extends Struct.CollectionTypeSchema {
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 500;
       }>;
-    sourceLink: Schema.Attribute.String &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 1000;
-      }>;
+    sourceLink: Schema.Attribute.Text;
     tags: Schema.Attribute.Relation<'manyToMany', 'api::tag.tag'>;
     title: Schema.Attribute.String &
       Schema.Attribute.SetMinMaxLength<{
