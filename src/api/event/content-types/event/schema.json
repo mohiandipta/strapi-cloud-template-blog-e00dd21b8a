@@ -48,19 +48,25 @@
       "type": "text"
     },
     "paragraphs": {
-      "type": "json"
+      "type": "richtext"
     },
     "blockquote": {
-      "type": "json"
+      "type": "richtext"
     },
     "gallery": {
-      "type": "json"
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "offerings": {
-      "type": "json"
+      "type": "richtext"
     },
     "tags": {
-      "type": "json"
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag"
     }
   }
 }

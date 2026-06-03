@@ -48,14 +48,16 @@
       "target": "api::category.category"
     },
     "content": {
-      "type": "json"
+      "type": "richtext"
     },
     "sourceLink": {
       "type": "string",
       "maxLength": 1000
     },
     "tags": {
-      "type": "json"
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag"
     }
   }
 }
